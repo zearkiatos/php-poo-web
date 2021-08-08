@@ -11,3 +11,8 @@ $user->type = new Administrator();
 
 
 echo $user->type->greet();
+
+echo "<pre>";
+include 'greet.php';
+
+echo greet("Pedro", "How are you?");
