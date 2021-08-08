@@ -1,4 +1,5 @@
 <?php
+
 use PHPUnit\Framework\TestCase;
 use App\User\Domain\User;
 use App\Administrator\Domain\Administrator;
@@ -13,5 +14,16 @@ class UserUnitTest extends TestCase
         $greet = $user->type->greet();
 
         $this->assertEquals($expectedValue, $greet);
+    }
+
+    function test_should_return_the_username()
+    {
+        $expectedValue = 'Pedro';
+        $user = new User();
+        $user->username = 'Pedro';
+
+        $username = $user->getUsername();
+
+        $this->assertEquals($expectedValue, $username);
     }
 }
