@@ -2,10 +2,9 @@
 
 namespace App\Administrator\Domain;
 
-class Administrator
+use App\Person\Domain\Person;
+
+class Administrator extends Person
 {
-    function greet()
-    {
-        return "Hola Administrador";
-    }
+    public $name = 'Administrator';
 }

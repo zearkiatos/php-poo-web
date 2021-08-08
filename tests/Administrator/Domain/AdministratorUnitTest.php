@@ -7,7 +7,7 @@ class AdministratorUnitTest extends TestCase
 {
     function test_should_execute_a_greet_and_return_a_greetings()
     {
-        $expectedValue = 'Hola Administrador';
+        $expectedValue = 'Hello Administrator';
         $administrator = new Administrator();
 
         $greet = $administrator->greet();

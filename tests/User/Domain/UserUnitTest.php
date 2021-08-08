@@ -7,7 +7,7 @@ class UserUnitTest extends TestCase
 {
     function test_should_declare_administrator_type_and_return_execute_greet()
     {
-        $expectedValue = 'Hola Administrador';
+        $expectedValue = 'Hello Administrator';
         $user = new User();
         $user->type = new Administrator();
         $greet = $user->type->greet();
