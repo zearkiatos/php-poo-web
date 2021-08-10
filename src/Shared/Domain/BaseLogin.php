@@ -2,13 +2,9 @@
 
 namespace App\Shared\Domain;
 
-abstract class Base
+abstract class BaseLogin
 {
     protected $name;
-
-    public function get()
-    {
-    }
 
     private function getClassName()
     {
@@ -17,8 +13,6 @@ abstract class Base
 
     public function login()
     {
-        return "My name is $this-name from the class {$this->getClassName()}";
+        return "My name is $this->name from the class {$this->getClassName()}";
     }
-
-    abstract public function store();
 }
