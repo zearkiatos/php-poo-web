@@ -5,6 +5,8 @@ use App\User\Domain\User;
 use App\Login\Domain\Guest;
 use App\Login\Domain\User as UserLogin;
 use App\Login\Domain\Administrator as AdministratorLogin;
+use App\Search\Domain\PostSearch;
+use App\Search\Domain\UserSearch;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -34,5 +36,14 @@ echo "<pre>";
 
 $administratorLogin = new AdministratorLogin('Admin');
 echo $administratorLogin->login();
+
+echo "<pre>";
+
+$postSearch = new PostSearch();
+$userSearch = new UserSearch();
+
+echo $postSearch->all();
+echo "<pre>";
+echo $userSearch->all();
 
 
